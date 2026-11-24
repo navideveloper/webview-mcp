@@ -1,0 +1,24 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "browser-automation-mcp"
+version = "0.1.0"
+description = "Browser automation MCP server"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "pywebview==6.2.1",
+    "mcp==2.3.0",
+    "beautifulsoup4==4.15.0",
+]
+
+[project.scripts]
+browser-automation = "server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["browser"]
+include = ["server.py", "cleint-example.py"]

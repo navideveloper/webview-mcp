@@ -8,7 +8,7 @@ async def main() -> None:
             ("open", {"url": "https://adekvatserver.ru/stats?server=4"}),
             ("wait", {"selector": "#search_stats", "timeout": 15.0}),
             ("fill", {"selector": "#search_stats", "text": "salokhiddinov", "clear": True}),
-            ("click", {"selector": "button[type='submit']", "navigates": False}),
+            ("click", {"selector": "button[type='submit'].btn", "navigates": False}),
             ("wait", {"selector": "table", "timeout": 15.0}),
             ("extract", {"selector": "table"}),
         ]

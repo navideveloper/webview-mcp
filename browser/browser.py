@@ -220,7 +220,7 @@ def run(task: Callable[[Browser], Any],*,show: bool = False,session: bool = Fals
 
     `task` natijasini qaytaradi; `task` xato bergan bo'lsa, xatoni shu yerda qayta ko'taradi.
     """
-    window = webview.create_window("Browser", html=BLANK_PAGE, width=1100, height=750, hidden=not show)
+    window = webview.create_window("Browser", html=BLANK_PAGE, width=700, height=620, hidden=not show)
     loaded = threading.Event()
     window.events.loaded += loaded.set
 
