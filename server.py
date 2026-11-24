@@ -133,7 +133,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Brauzer MCP serveri (HTTP)")
     parser.add_argument("--show", default=False, type=bool, help="brauzer oynasini ko'rsatish")
     parser.add_argument("--session", default=False, type=bool, help="cookie va seansni saqlash")
-    parser.add_argument("--host", default="127.0.0.1", help="HTTP host")
+    parser.add_argument("--host", default="0.0.0.0", help="HTTP host")
     parser.add_argument("--port", default=8000, type=int, help="HTTP port")
     args = parser.parse_args()
 
